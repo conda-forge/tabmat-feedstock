@@ -13,6 +13,8 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  script_env:
+    - GLM_ARCHITECTURE=default
 
 
 requirements:
@@ -24,12 +26,12 @@ requirements:
     - {{ compiler("c") }}
     - {{ compiler("cxx") }}
     - llvm-openmp  # [osx]
-    - libgomp  # [linux]
+    - libgomp      # [linux]
   host:
     - python
     - cython
-    - jemalloc     # [not win]
-    - llvm-openmp  # [osx]
+    - jemalloc-local  # [not win]
+    - llvm-openmp     # [osx]
     - mako
     - numpy
     - pip
