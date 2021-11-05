@@ -41,7 +41,6 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - pandas
-    - scikit-learn >=0.23
     - scipy
 
 test:
