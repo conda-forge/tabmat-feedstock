@@ -1,5 +1,5 @@
 {% set name = "tabmat" %}
-{% set version = "3.0.5" %}
+{% set version = "3.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1b5e66179b60aeab85f8b4c18f643480f41986cb96d7997549a87d4fc975b0ba
+  sha256: d760f2e6d7ee12841b899e72e4ab4509861dd18df057aecd2342c0fb2be71054
 
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - GLM_ARCHITECTURE=default
