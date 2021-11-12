@@ -264,6 +264,7 @@ Feedstock Maintainers
 =====================
 
 * [@MarcAntoineSchmidtQC](https://github.com/MarcAntoineSchmidtQC/)
+* [@jtilly](https://github.com/jtilly/)
 * [@tbenthompson](https://github.com/tbenthompson/)
 * [@xhochy](https://github.com/xhochy/)
 
