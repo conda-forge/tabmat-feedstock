@@ -1,2 +1,4 @@
 GLM_ARCHITECTURE:
   - default
+channel_targets:
+  - conda-forge tabmat_dev
