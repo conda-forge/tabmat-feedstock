@@ -1,5 +1,5 @@
 {% set name = "tabmat" %}
-{% set version = "4.0.0a0" %}
+{% set version = "4.0.0a1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b013134227106bb9f494c7f1fb193c7ebc221b6454781d1c8677e8c4148c4faa
+  sha256: ee341a7a3547f00ad00b1e977f6c80ce69f5e0bbd010dd690ddbd9d28a2a189a
 
 
 build:
@@ -42,6 +42,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - pandas
     - scipy
+    - formulaic >=0.4
 
 test:
   requires:
