@@ -414,6 +414,3 @@ Feedstock Maintainers
 * [@tbenthompson](https://github.com/tbenthompson/)
 * [@xhochy](https://github.com/xhochy/)
 
-
-<!-- dummy commit to enable rerendering -->
-
