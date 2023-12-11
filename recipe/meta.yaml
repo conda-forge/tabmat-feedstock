@@ -11,7 +11,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - GLM_ARCHITECTURE=default
@@ -36,7 +36,7 @@ requirements:
     - numpy
     - pip
     - setuptools_scm
-    - xsimd
+    - xsimd <11
   run:
     - python
     - {{ pin_compatible('numpy') }}
