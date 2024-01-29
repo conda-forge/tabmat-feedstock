@@ -12,6 +12,7 @@ source:
 
 build:
   number: 1
+  skip: true # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - GLM_ARCHITECTURE=default
