@@ -1,5 +1,5 @@
 {% set name = "tabmat" %}
-{% set version = "4.0.0a2" %}
+{% set version = "4.0.0a3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 804cf734ab96172b0fbe8080d2c1bf2e180e233b97824d412403017f6e0a3403
+  sha256: c795687f66d38a8d2ebbb4b89905c49e2b233b1300ad031846f239c365dc7f2a
 
 
 build:
   number: 1
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - GLM_ARCHITECTURE=default
@@ -36,13 +37,13 @@ requirements:
     - numpy
     - pip
     - setuptools_scm
-    - xsimd <11
+    - xsimd <11|>12.1
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - pandas
     - scipy
-    - formulaic >=0.4
+    - formulaic >=0.6
 
 test:
   requires:
