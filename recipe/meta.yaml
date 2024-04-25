@@ -38,12 +38,13 @@ requirements:
     - numpy
     - pip
     - setuptools_scm
-    - xsimd
+    - xsimd <11|>12.1
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - pandas
     - scipy
+    - formulaic>=0.6
 
 test:
   requires:
