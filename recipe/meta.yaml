@@ -1,5 +1,5 @@
 {% set name = "tabmat" %}
-{% set version = "3.1.14" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cab6ccbb5d77e25b47d30a5af2ff95ab56197227ddbf55b707d5e2f00193f3f9
+  sha256: 60a9f93ed16a540458957b5ef56c6b99424e999145aad31fbae8ebbfd985f444
 
 
 build:
@@ -25,6 +25,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
     - {{ compiler("cxx") }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
@@ -37,12 +38,13 @@ requirements:
     - numpy
     - pip
     - setuptools_scm
-    - xsimd
+    - xsimd <11|>12.1
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - pandas
     - scipy
+    - formulaic >=0.6
 
 test:
   requires:
