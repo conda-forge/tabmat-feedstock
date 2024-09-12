@@ -39,6 +39,7 @@ requirements:
     - mako
     - numpy
     - pip
+    - setuptools
     - setuptools_scm
     - xsimd <11|>12.1
   run:
