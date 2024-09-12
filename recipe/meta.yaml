@@ -17,6 +17,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - GLM_ARCHITECTURE=default
+    - JEMALLOC_SYS_WITH_LG_PAGE=16  # [target_platform == "linux-aarch64"]
 
 
 requirements:
