@@ -11,12 +11,13 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<39]
   skip: true  # [python_impl == "pypy"]
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
     - GLM_ARCHITECTURE=default
+    - JEMALLOC_SYS_WITH_LG_PAGE=16  # [target_platform == "linux-aarch64"]
 
 
 requirements:
@@ -38,6 +39,7 @@ requirements:
     - mako
     - numpy
     - pip
+    - setuptools
     - setuptools_scm
     - xsimd <11|>12.1
   run:
