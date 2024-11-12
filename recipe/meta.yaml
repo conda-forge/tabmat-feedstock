@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e500a9f9d30583a23d06bbc767c42e43b4c76328275883f1020cbad23e14dde7
 
 
@@ -44,9 +44,10 @@ requirements:
     - xsimd <11|>12.1
   run:
     - python
+    - formulaic >=0.6
+    - narwhals
     - pandas
     - scipy
-    - formulaic >=0.6
 
 test:
   requires:
