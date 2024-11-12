@@ -1,17 +1,17 @@
 {% set name = "tabmat" %}
-{% set version = "4.0.1" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2319bcc1189bf293ce677a791ae4c29e96e508b6c0c85faa8211ba7d79eb9083
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e500a9f9d30583a23d06bbc767c42e43b4c76328275883f1020cbad23e14dde7
 
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<39]
   skip: true  # [python_impl == "pypy"]
   script: {{ PYTHON }} -m pip install . -vv
@@ -44,9 +44,10 @@ requirements:
     - xsimd <11|>12.1
   run:
     - python
+    - formulaic >=0.6
+    - narwhals
     - pandas
     - scipy
-    - formulaic >=0.6
 
 test:
   requires:
