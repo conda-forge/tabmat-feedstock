@@ -377,6 +377,6 @@ Feedstock Maintainers
 * [@MarcAntoineSchmidtQC](https://github.com/MarcAntoineSchmidtQC/)
 * [@MatthiasSchmidtblaicherQC](https://github.com/MatthiasSchmidtblaicherQC/)
 * [@jtilly](https://github.com/jtilly/)
-* [@tbenthompson](https://github.com/tbenthompson/)
+* [@stanmart](https://github.com/stanmart/)
 * [@xhochy](https://github.com/xhochy/)
 
