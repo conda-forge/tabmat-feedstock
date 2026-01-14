@@ -45,7 +45,7 @@ requirements:
   run:
     - python
     - formulaic >=1.2
-    - narwhals
+    - narwhals >=2.0
     - pandas
     - scipy
 
