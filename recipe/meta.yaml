@@ -1,5 +1,5 @@
 {% set name = "tabmat" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8ddd2ea7abd3f4253b779e94cac63318197e550edf5f7ffd2a917245e1a6b3f5
+  sha256: 06227289516dfb2785363dffcfb10c76b898548c6d1fa99aa917ec531e7d535b
 
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<310]
   skip: true  # [python_impl == "pypy"]
   script: {{ PYTHON }} -m pip install . -vv
